@@ -1,16 +1,76 @@
-# React + Vite
+# CHRONOS-X
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A premium luxury watch product landing page built with React and GSAP. Features scroll-driven animations, an interactive exploded-view diagram, horizontal image gallery, and a full technical specifications section — all rendered in a dark, cinematic aesthetic.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Cinematic Preloader** — Animated counter with progress bar before page reveal
+- **Scroll Progress Indicator** — Fixed top bar tracking page scroll position
+- **Hero Section** — Animated watch face built entirely with CSS/React (no images), with parallax scroll effects
+- **Infinite Marquee** — Auto-scrolling text band with pause-on-hover
+- **Exploded View** — Scroll-pinned interactive diagram that separates watch components (sapphire crystal, bezel, dial, movement, case back, titanium case) with 3D perspective transforms
+- **Feature Cards** — Six technology cards with hover effects and stat highlights
+- **Horizontal Gallery** — Scroll-pinned horizontal image carousel with zoom-on-hover
+- **Tech Specs Table** — Responsive specification grid with row hover states
+- **Glass Navbar** — Transparent navbar that transitions to frosted glass on scroll
+- **Noise + Grid Overlays** — Subtle texture layers for visual depth
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Layer | Technology |
+|-------|-----------|
+| Framework | React 19 |
+| Build Tool | Vite 8 |
+| Animations | GSAP + ScrollTrigger |
+| Smooth Scroll | Lenis |
+| Styling | Tailwind CSS 4 + Inline Styles |
+| Icons | Lucide React |
+| Linting | Oxlint |
 
-## Expanding the Oxlint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```
+src/
+├── App.jsx                 # Root component, Lenis smooth scroll setup
+├── main.jsx                # Entry point
+├── index.css               # Global styles, animations, overlays
+├── assets/
+│   └── hero.png            # Hero background asset
+└── components/
+    ├── Preloader.jsx        # Loading screen with animated counter
+    ├── ScrollProgress.jsx   # Top scroll progress bar
+    ├── Navbar.jsx           # Fixed glass-morphism navigation
+    ├── Hero.jsx             # CSS-only watch face with parallax
+    ├── Marquee.jsx          # Infinite scrolling text band
+    ├── ExplodedView.jsx     # Scroll-pinned component breakdown
+    ├── Features.jsx         # 6 technology feature cards
+    ├── Gallery.jsx          # Horizontal scroll image gallery
+    ├── TechSpecs.jsx        # Specification table with badges
+    └── Footer.jsx           # Page footer
+```
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Design System
+
+- **Background**: Obsidian `#0A0A0C`
+- **Primary Accent**: Cyan `#00F0FF`
+- **Secondary Accent**: Lime `#D4FF00`
+- **Text**: Crisp White `#F8F9FA`
+- **Muted**: `#8E95A5`
+- **Borders**: `#22242A`
+- **Fonts**: Syne (headings), Inter (body), Space Mono (labels)
